@@ -351,19 +351,21 @@ header {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 30px; }
-  .works img {
-    width: 20%;
-    height: auto;
-    padding: 16px; }
+  .works-pic {
+    width: 21%;
+    padding: 16px;
+    display: inline-block; }
     @media (max-width: 900px) {
-      .works img {
+      .works-pic {
         width: 28%; } }
     @media (max-width: 767px) {
-      .works img {
+      .works-pic {
         width: 400px; } }
     @media (max-width: 480px) {
-      .works img {
+      .works-pic {
         width: 90%; } }
+  .works img {
+    width: 100%; }
 
 .banner i, .scroll-down i {
   color: white;

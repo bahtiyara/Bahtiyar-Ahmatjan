@@ -17,10 +17,10 @@
 		letter-spacing: 1px;
 		margin-bottom: 30px;
 	}
-	img{
-		width: 20%;
-		height: auto;
+	&-pic{
+		width: 21%;
 		padding: 16px;
+		display: inline-block;
 		@media #{$big-wide} {
 			width: 28%;
 		};
@@ -30,5 +30,8 @@
 		@media #{$small-wide} {
 			width: 90%;
 		};
+	}
+	img{
+		width: 100%;
 	}
 }
