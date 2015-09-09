@@ -1,0 +1,21 @@
+//path
+
+$path-font: '../fonts';
+$path-img:  '../img';
+
+//color
+
+
+//media queries
+
+$xbig-wide:   '(max-width: 1024px)';
+$big-wide:    '(max-width:  900px)';
+$middle-wide: '(max-width:  767px)';
+$small-wide:  '(max-width:  480px)';
+
+//reset
+
+h1,h2,h3,h4,h5,h6, p,i, span,div{
+	margin: 0;
+	padding: 0;
+}

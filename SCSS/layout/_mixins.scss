@@ -1,0 +1,62 @@
+//font face
+
+@mixin font-face($family, $file) {
+	@font-face {
+		font-family: $family;
+		src: url('#{$path-font}/#{$file}-webfont.eot');
+		src: url('#{$path-font}/#{$file}-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('#{$path-font}/#{$file}-webfont.woff') format('woff'),
+			 url('#{$path-font}/#{$file}-webfont.ttf') format('truetype');
+	}
+}
+
+@include font-face('OpenSans Bold', OpenSans-Bold);
+@include font-face('fontawesome', fontawesome);
+@include font-face('fontello', fontello);
+@include font-face('Librebaskerville Italic', librebaskerville-italic);
+@include font-face('Librebaskerville Regular', librebaskerville-regular);
+@include font-face('OpenSans Light', OpenSans-Light);
+@include font-face('OpenSans Regular', OpenSans-Regular);
+@include font-face('OpenSans Semibold', OpenSans-Semibold);
+
+//media queries
+
+@mixin font($size, $line-height: null) {
+	font-size: $size*0.9;
+	line-height: $line-height*0.8;
+
+	@media #{$xbig-wide} {
+		font-size: $size*0.8;
+		line-height: $line-height*0.523;
+	};
+	@media #{$big-wide} {
+		font-size: $size*0.7;
+		line-height: $line-height*0.523;
+	};
+	@media #{$middle-wide} {
+		font-size: $size*0.6;
+		line-height: $line-height*0.523;
+	};
+	@media #{$small-wide} {
+		font-size: $size*0.4;
+		line-height: $line-height*0.523;
+	};
+}
+
+@mixin wrapper-width($width) {
+	width: $width;
+
+	@media #{$xbig-wide} {
+		width: $width*0.85;
+	};
+	@media #{$big-wide} {
+		width: $width*0.75;
+	};
+	@media #{$middle-wide} {
+		width: $width*0.45;
+	};
+	@media #{$small-wide} {
+		width: 85%;
+	};
+}
+

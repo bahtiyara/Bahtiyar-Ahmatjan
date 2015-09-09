@@ -1,0 +1,20 @@
+//style the icon
+
+%icon-style{
+	color: white;
+	&:hover{
+		color: #11ABB0;
+	}
+	transition: color 0.5s;
+}
+
+
+//ranging bar style except width
+
+%rang{
+	height: 42px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius:3px;
+	z-index: 1;
+	margin-top: -42px;
+}

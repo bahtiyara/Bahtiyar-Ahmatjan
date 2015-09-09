@@ -1,0 +1,71 @@
+.about{
+	background-color: #2B2B2B;
+	width: 100%;
+	height: auto;
+	float: left;
+	&-wrapper{
+		@include wrapper-width(1000px);
+		margin: 96px auto 10px auto;
+	}
+	&-pic{
+		width: 120px;
+		height: 120px;
+		border-radius: 100%;
+		background-color: #838C95;
+		background: url('#{$path-img}/profile-pic.jpg') no-repeat;
+		margin-left: 10px;
+		@media #{$middle-wide} {
+			display: none;
+		};
+	}
+	&-text{
+		margin-left: 26.5%;
+		margin-top: -112px;
+		@media #{$middle-wide} {
+			margin: 0;
+		};
+	}
+	h3{
+		font: 22px/30px 'OpenSans Bold', sans-serif;
+		color: white;
+		margin-bottom: 20px;
+	}
+	p{
+		line-height: 30px;
+		color: #7A7A7A;
+		font: 15px/30px 'OpenSans Regular';
+		margin-top: -10px;
+		margin-bottom: 30px;
+	}
+	&-download{
+		text-decoration: none;
+		display: inline-block;
+		width: 222px;
+		height: 54px;
+		background-color: #444;
+		border-radius: 3px;
+		font: 16px/30px 'OpenSans Bold', sans-serif;
+		color: white;
+		text-align: center;
+		position: relative;
+		left: 64%;
+		bottom: 180px;
+		@media #{$middle-wide} {
+			left: 0px;
+			bottom: 0px;
+			width: 100%;
+			margin-bottom: 100px;
+		};
+		i{
+			font-size: 20px;
+			color: inherit;
+			margin-right: 15px;
+			line-height: 50px;
+		}
+		&:hover{
+			background-color: white;
+			color: #2B2B2B;
+		}
+		transition: all 0.2s;
+	}
+}

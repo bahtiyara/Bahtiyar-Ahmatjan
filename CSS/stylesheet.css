@@ -1,0 +1,381 @@
+h1, h2, h3, h4, h5, h6, p, i, span, div {
+  margin: 0;
+  padding: 0; }
+
+@font-face {
+  font-family: "OpenSans Bold";
+  src: url("../fonts/OpenSans-Bold-webfont.eot");
+  src: url("../fonts/OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Bold-webfont.woff") format("woff"), url("../fonts/OpenSans-Bold-webfont.ttf") format("truetype"); }
+@font-face {
+  font-family: "fontawesome";
+  src: url("../fonts/fontawesome-webfont.eot");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"); }
+@font-face {
+  font-family: "fontello";
+  src: url("../fonts/fontello-webfont.eot");
+  src: url("../fonts/fontello-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fontello-webfont.woff") format("woff"), url("../fonts/fontello-webfont.ttf") format("truetype"); }
+@font-face {
+  font-family: "Librebaskerville Italic";
+  src: url("../fonts/librebaskerville-italic-webfont.eot");
+  src: url("../fonts/librebaskerville-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/librebaskerville-italic-webfont.woff") format("woff"), url("../fonts/librebaskerville-italic-webfont.ttf") format("truetype"); }
+@font-face {
+  font-family: "Librebaskerville Regular";
+  src: url("../fonts/librebaskerville-regular-webfont.eot");
+  src: url("../fonts/librebaskerville-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/librebaskerville-regular-webfont.woff") format("woff"), url("../fonts/librebaskerville-regular-webfont.ttf") format("truetype"); }
+@font-face {
+  font-family: "OpenSans Light";
+  src: url("../fonts/OpenSans-Light-webfont.eot");
+  src: url("../fonts/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Light-webfont.woff") format("woff"), url("../fonts/OpenSans-Light-webfont.ttf") format("truetype"); }
+@font-face {
+  font-family: "OpenSans Regular";
+  src: url("../fonts/OpenSans-Regular-webfont.eot");
+  src: url("../fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular-webfont.woff") format("woff"), url("../fonts/OpenSans-Regular-webfont.ttf") format("truetype"); }
+@font-face {
+  font-family: "OpenSans Semibold";
+  src: url("../fonts/OpenSans-Semibold-webfont.eot");
+  src: url("../fonts/OpenSans-Semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Semibold-webfont.woff") format("woff"), url("../fonts/OpenSans-Semibold-webfont.ttf") format("truetype"); }
+body {
+  margin: 0px;
+  padding: 0px; }
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 48px;
+  z-index: 99; }
+  @media (max-width: 767px) {
+    nav {
+      display: none !important; } }
+  nav .nav-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px; }
+    nav .nav-wrapper a {
+      text-decoration: none;
+      font-family: 'OpenSans Bold', sans-serif;
+      font-size: 10px;
+      color: white;
+      letter-spacing: 2.5px;
+      line-height: 47px;
+      text-transform: uppercase;
+      padding: 15px 12px; }
+      nav .nav-wrapper a.active {
+        color: #e25b01; }
+
+header {
+  width: 100%;
+  background: url("../img/head_bg.jpg") no-repeat;
+  background-position: top center;
+  background-size: cover;
+  display: table;
+  float: left;
+  min-height: 480px; }
+
+.banner {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center; }
+  .banner-wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    width: 1000px;
+    margin-top: -40px; }
+    @media (max-width: 1024px) {
+      .banner-wrapper {
+        width: 850px; } }
+    @media (max-width: 900px) {
+      .banner-wrapper {
+        width: 750px; } }
+    @media (max-width: 767px) {
+      .banner-wrapper {
+        width: 450px; } }
+    @media (max-width: 480px) {
+      .banner-wrapper {
+        width: 85%; } }
+  .banner span {
+    color: white; }
+  .banner h1 {
+    font-size: 81px;
+    line-height: 1.68em;
+    font-family: 'OpenSans Bold', sans-serif;
+    color: white;
+    margin: 0px; }
+    @media (max-width: 1024px) {
+      .banner h1 {
+        font-size: 72px;
+        line-height: 1.0983em; } }
+    @media (max-width: 900px) {
+      .banner h1 {
+        font-size: 63.0px;
+        line-height: 1.0983em; } }
+    @media (max-width: 767px) {
+      .banner h1 {
+        font-size: 54px;
+        line-height: 1.0983em; } }
+    @media (max-width: 480px) {
+      .banner h1 {
+        font-size: 36px;
+        line-height: 1.0983em; } }
+  .banner p {
+    color: #A8A8A8;
+    font: 18px/1.9em 'Librebaskerville Regular', serif;
+    margin: 10px auto 15px auto; }
+    @media (max-width: 767px) {
+      .banner p {
+        font-size: 15px;
+        line-height: 1.8em; } }
+  .banner .divider {
+    background-color: rgba(168, 168, 168, 0.1);
+    width: 80%;
+    height: 1px;
+    margin: auto; }
+  .banner ul {
+    margin-left: -60px; }
+  .banner li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+    margin-top: 15px; }
+    @media (max-width: 767px) {
+      .banner li {
+        padding: 0 5px; } }
+  .banner i {
+    font-size: 30px; }
+    @media (max-width: 767px) {
+      .banner i {
+        font-size: 20px; } }
+
+.scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 26px;
+  margin-left: -29px;
+  cursor: pointer; }
+  .scroll-down i {
+    font-size: 42px; }
+  @media (max-width: 767px) {
+    .scroll-down {
+      display: none; } }
+
+.about {
+  background-color: #2B2B2B;
+  width: 100%;
+  height: auto;
+  float: left; }
+  .about-wrapper {
+    width: 1000px;
+    margin: 96px auto 10px auto; }
+    @media (max-width: 1024px) {
+      .about-wrapper {
+        width: 850px; } }
+    @media (max-width: 900px) {
+      .about-wrapper {
+        width: 750px; } }
+    @media (max-width: 767px) {
+      .about-wrapper {
+        width: 450px; } }
+    @media (max-width: 480px) {
+      .about-wrapper {
+        width: 85%; } }
+  .about-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background-color: #838C95;
+    background: url("../img/profile-pic.jpg") no-repeat;
+    margin-left: 10px; }
+    @media (max-width: 767px) {
+      .about-pic {
+        display: none; } }
+  .about-text {
+    margin-left: 26.5%;
+    margin-top: -112px; }
+    @media (max-width: 767px) {
+      .about-text {
+        margin: 0; } }
+  .about h3 {
+    font: 22px/30px 'OpenSans Bold', sans-serif;
+    color: white;
+    margin-bottom: 20px; }
+  .about p {
+    line-height: 30px;
+    color: #7A7A7A;
+    font: 15px/30px 'OpenSans Regular';
+    margin-top: -10px;
+    margin-bottom: 30px; }
+  .about-download {
+    text-decoration: none;
+    display: inline-block;
+    width: 222px;
+    height: 54px;
+    background-color: #444;
+    border-radius: 3px;
+    font: 16px/30px 'OpenSans Bold', sans-serif;
+    color: white;
+    text-align: center;
+    position: relative;
+    left: 64%;
+    bottom: 180px;
+    transition: all 0.2s; }
+    @media (max-width: 767px) {
+      .about-download {
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        margin-bottom: 100px; } }
+    .about-download i {
+      font-size: 20px;
+      color: inherit;
+      margin-right: 15px;
+      line-height: 50px; }
+    .about-download:hover {
+      background-color: white;
+      color: #2B2B2B; }
+
+.resume {
+  background-color: white;
+  width: 100%;
+  height: auto;
+  float: left; }
+  .resume-wrapper {
+    width: 1000px;
+    margin: 96px auto 130px auto; }
+    @media (max-width: 1024px) {
+      .resume-wrapper {
+        width: 850px; } }
+    @media (max-width: 900px) {
+      .resume-wrapper {
+        width: 750px; } }
+    @media (max-width: 767px) {
+      .resume-wrapper {
+        width: 450px; } }
+    @media (max-width: 480px) {
+      .resume-wrapper {
+        width: 85%; } }
+    @media (max-width: 767px) {
+      .resume-wrapper {
+        text-align: center; } }
+  .resume h4 {
+    font: 18px/24px 'OpenSans Bold', sans-serif;
+    text-transform: uppercase;
+    color: #313131;
+    display: inline-block;
+    border-bottom: 3px solid #11ABB0;
+    padding-bottom: 5px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    letter-spacing: 2px; }
+  .resume-text {
+    margin-top: -80px;
+    margin-left: 26.5%; }
+    @media (max-width: 767px) {
+      .resume-text {
+        margin-top: 0;
+        margin-left: 0; } }
+  .resume h3 {
+    font: 25px/30px 'OpenSans Bold', sans-serif;
+    color: #313131;
+    margin-bottom: 12px;
+    margin-top: 10px; }
+  .resume i {
+    font: 16px/24px 'Librebaskerville Italic', serif;
+    color: #6E7881;
+    margin-bottom: 18px;
+    margin-top: 9px; }
+  .resume p {
+    color: #838C95;
+    font: 15px/30px 'OpenSans Regular';
+    margin-top: 9px;
+    margin-bottom: 35px; }
+    @media (max-width: 767px) {
+      .resume p {
+        text-align: justify; } }
+  .resume span {
+    color: #838C95;
+    font: 15px/30px 'OpenSans Regular'; }
+  .resume .divider {
+    width: 100%;
+    height: 1px;
+    background-color: #E8E8E8;
+    margin: 60px 0; }
+  .resume h6 {
+    font: 15px 'OpenSans Bold', sans-serif;
+    color: #313131;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 55px;
+    margin-top: 25px;
+    text-align: left; }
+  .resume .down {
+    background-color: #ccc;
+    height: 42px;
+    width: 83%;
+    border-radius: 3px; }
+    @media (max-width: 767px) {
+      .resume .down {
+        width: 100%; } }
+  .resume .up1 {
+    width: 50%; }
+  .resume .up2 {
+    width: 45%; }
+  .resume .up3 {
+    width: 41%; }
+  .resume .up4 {
+    width: 75%; }
+  .resume .up5 {
+    width: 68%; }
+  .resume .up6 {
+    width: 41%; }
+  .resume .up {
+    background-color: #313131;
+    height: 42px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    z-index: 2;
+    margin-top: -42px;
+    width: 0; }
+
+.works {
+  background-color: #EBEEEE;
+  width: 100%;
+  height: auto;
+  float: left; }
+  .works-wrapper {
+    width: 95%;
+    max-width: 1024px;
+    margin: 90px auto;
+    text-align: center; }
+  .works h6 {
+    font: 15px/24px 'OpenSans Semibold', sans-serif;
+    color: #95A3A3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px; }
+  .works img {
+    width: 20%;
+    height: auto;
+    padding: 16px; }
+    @media (max-width: 900px) {
+      .works img {
+        width: 28%; } }
+    @media (max-width: 767px) {
+      .works img {
+        width: 400px; } }
+    @media (max-width: 480px) {
+      .works img {
+        width: 90%; } }
+
+.banner i, .scroll-down i {
+  color: white;
+  transition: color 0.5s; }
+  .banner i:hover, .scroll-down i:hover {
+    color: #11ABB0; }
+
+.resume .up1, .resume .up2, .resume .up3, .resume .up4, .resume .up5, .resume .up6 {
+  height: 42px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  z-index: 1;
+  margin-top: -42px; }
+
+/*# sourceMappingURL=stylesheet.css.map */
