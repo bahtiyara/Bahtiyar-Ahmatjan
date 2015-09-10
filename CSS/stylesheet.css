@@ -341,7 +341,7 @@ header {
   height: auto;
   float: left; }
   .works-wrapper {
-    width: 95%;
+    width: 98%;
     max-width: 1024px;
     margin: 90px auto;
     text-align: center; }
@@ -352,8 +352,10 @@ header {
     letter-spacing: 1px;
     margin-bottom: 30px; }
   .works-pic {
+    background: url("../img/coffee.jpg") no-repeat;
+    background-size: 100% 100%;
     width: 21%;
-    padding: 16px;
+    margin: 14px;
     display: inline-block; }
     @media (max-width: 900px) {
       .works-pic {

@@ -53,3 +53,11 @@ function rangebaranimate() {
 
 $(document).scroll(rangebaranimate);
 
+// Make works-pic's height as its width
+function heightAsWidth() {
+	var picwidth = $('.works-pic').width();
+	$('.works-pic').height(picwidth);
+}
+$(document).ready(heightAsWidth);
+$(window).resize(heightAsWidth);
+
