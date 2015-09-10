@@ -56,4 +56,3 @@ function heightAsWidth() {
 }
 $(document).ready(heightAsWidth);
 $(window).resize(heightAsWidth);
-

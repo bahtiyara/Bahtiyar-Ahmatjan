@@ -370,7 +370,12 @@ header {
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.7);
-      display: table; }
+      display: table;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.5s; }
+      .works-pic-hover:hover {
+        opacity: 1; }
       .works-pic-hover h5 {
         font: 14px/21px 'OpenSans Bold', sans-serif;
         color: #fff;
