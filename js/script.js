@@ -3,7 +3,6 @@ function full() {
 	height = $(window).height();
 	$('header').css("height", height);
 }
-
 $(document).ready(full);
 $(window).resize(full);
 
@@ -14,7 +13,6 @@ function scrolltoabout() {
 		scrollTop: $(".about").offset().top
 	}, 700);
 }
-
 $(document).ready(function() {
 	$(".scroll-down, .nav-wrapper a:nth-of-type(2)").click(scrolltoabout);
 });
@@ -35,7 +33,6 @@ function hideorshow() {
 		$("nav").fadeOut(200);
 	}
 }
-
 $(document).scroll(hideorshow);
 $(window).resize(hideorshow);
 
@@ -50,7 +47,6 @@ function rangebaranimate() {
 		done = true;
 	};
 }
-
 $(document).scroll(rangebaranimate);
 
 // Make works-pic's height as its width
