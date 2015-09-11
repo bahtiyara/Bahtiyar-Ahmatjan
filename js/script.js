@@ -56,3 +56,23 @@ function heightAsWidth() {
 }
 $(document).ready(heightAsWidth);
 $(window).resize(heightAsWidth);
+
+//about works pop
+$(document).ready(function() {
+	// Both black background and PopUp should be hide
+	$('.works-black').hide();
+	$('.works-black-pop').hide();
+	// Clicking the black background will hide b-bg and PopUp
+	$('.works-black').click(function() {
+		$('.works-black-pop').hide();
+		$('.works-black').hide();
+	});
+	// Clicking any works-pic should show b-bg, PopUp and fill the proper content
+	$('.works-pic:nth-of-type(1) .works-pic-hover').click(function() {
+		// Show b-bg, PopUp
+		$('.works-black').show();
+		$('.works-black-pop').fadeIn();
+		// fill proper content
+
+	});
+});

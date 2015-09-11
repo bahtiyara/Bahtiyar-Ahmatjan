@@ -351,37 +351,28 @@ header {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 30px; }
-  .works-black {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 100;
-    display: none; }
   .works-pic {
     background-size: cover !important;
     background-position: center;
     width: 21%;
     margin: 14px;
     display: inline-block; }
+    .works-pic:nth-of-type(1) {
+      background: url("../img/coffee.jpg") no-repeat; }
     .works-pic:nth-of-type(2) {
-      background: url("../img/coffee.jpg") no-repeat; }
+      background: url("../img/console.jpg") no-repeat; }
     .works-pic:nth-of-type(3) {
-      background: url("../img/coffee.jpg") no-repeat; }
+      background: url("../img/judah.jpg") no-repeat; }
     .works-pic:nth-of-type(4) {
-      background: url("../img/coffee.jpg") no-repeat; }
+      background: url("../img/into-the-light.jpg") no-repeat; }
     .works-pic:nth-of-type(5) {
-      background: url("../img/coffee.jpg") no-repeat; }
+      background: url("../img/farmerboy.jpg") no-repeat; }
     .works-pic:nth-of-type(6) {
-      background: url("../img/coffee.jpg") no-repeat; }
+      background: url("../img/girl.jpg") no-repeat; }
     .works-pic:nth-of-type(7) {
-      background: url("../img/coffee.jpg") no-repeat; }
+      background: url("../img/origami.jpg") no-repeat; }
     .works-pic:nth-of-type(8) {
-      background: url("../img/coffee.jpg") no-repeat; }
-    .works-pic:nth-of-type(9) {
-      background: url("../img/coffee.jpg") no-repeat; }
+      background: url("../img/retrocam.jpg") no-repeat; }
     @media (max-width: 900px) {
       .works-pic {
         width: 28%; } }
@@ -419,8 +410,62 @@ header {
         display: table-cell;
         vertical-align: middle;
         width: 100%; }
-    .works-pic-click {
-      display: none; }
+
+.works-black {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  display: table; }
+  .works-black-wrapper {
+    display: table-cell;
+    vertical-align: middle; }
+  .works-black-pop {
+    width: 90%;
+    max-width: 550px;
+    height: auto;
+    background-color: white;
+    margin: 0 auto;
+    z-index: 120; }
+    .works-black-pop img {
+      width: 100%; }
+    .works-black-pop-white {
+      display: block;
+      margin: 17px 36px; }
+      .works-black-pop-white h5 {
+        font: 15px/24px 'OpenSans Bold', sans-serif;
+        margin-bottom: 12px;
+        color: #111; }
+      .works-black-pop-white p {
+        font: 14px/24px 'OpenSans Regular', sans-serif;
+        color: #A1A1A1;
+        margin-bottom: 12px; }
+      .works-black-pop-white i {
+        margin-right: 2px;
+        font-size: 11px;
+        color: #A1A1A1; }
+      .works-black-pop-white span {
+        font: 11px/21px 'OpenSans Light', sans-serif;
+        color: #A1A1A1;
+        text-transform: uppercase;
+        letter-spacing: 2px; }
+    .works-black-pop-black {
+      display: block;
+      background-color: #111;
+      padding: 23px 36px; }
+      .works-black-pop-black a {
+        color: white;
+        font: 11px/21px 'OpenSans Bold', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-decoration: none;
+        padding-right: 20px;
+        transition: color .3s; }
+        .works-black-pop-black a:hover {
+          color: #00CCCC; }
 
 .banner i, .scroll-down i {
   color: white;
