@@ -343,7 +343,7 @@ header {
   .works-wrapper {
     width: 98%;
     max-width: 1024px;
-    margin: 90px auto;
+    margin: 90px auto 78px auto;
     text-align: center; }
   .works h6 {
     font: 15px/24px 'OpenSans Semibold', sans-serif;
