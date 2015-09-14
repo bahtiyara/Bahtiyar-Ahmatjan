@@ -1,4 +1,11 @@
 .testimonials{
+	@-webkit-keyframes movingblkqo{
+		0% {margin-top: 0px;}
+		4% {margin-top: -300px;}
+		50% {margin-top: -300px;}
+		54% {margin-top: 0px;}
+		100% {margin-top: 0px;}
+	}
 	background: url('#{$path-img}/testimonials-bg.jpg') no-repeat;
 	background-size: cover;
 	background-position: top center;
@@ -16,6 +23,9 @@
 	i{
 		color: white;
 		font-size: 72px;
+		@media #{$middle-wide} {
+			display: none;
+		}
 	}
 	.b-wrapper{
 		text-shadow: rgb(0, 0, 0) 0px 1px 3px;
@@ -24,9 +34,16 @@
 		margin-top: -100px;
 		height: 300px;
 		overflow: hidden;
+		@media #{$middle-wide} {
+			margin-left: 0px;
+			margin-top: 0px;
+		}
 	}
 	p{
 		font: 24px/48px 'Librebaskerville Italic', serif;
+		@media #{$middle-wide} {
+			font: 20px/42px;
+		}
 	}
 	cite{
 		font: 12px 'OpenSans Regular', sans-serif;
@@ -40,9 +57,12 @@
 		width: 12px;
 		height: 12px;
 		border-radius: 100%;
-		background-color: white;
 		display: inline-block;
 		margin-right: 4px;
+		background-color: white;
+	}
+	.c-active{
+		opacity: 1;
 	}
 	.c-inactive{
 		opacity: 0.5;
@@ -54,5 +74,8 @@
 	.circle-wrapper{
 		padding-left: 180px;
 		padding-top: 20px;
+	}
+	.b-wrapper-i{
+		-webkit-animation: movingblkqo 20s infinite;
 	}
 }

@@ -1,13 +1,54 @@
 .contact{
 	background: #191919;
 	width: 100%;
-	height: 500px;
+	height: auto;
 	float: left;
 	&-wrapper{
 		@include wrapper-width(1000px);
 		margin: 110px auto 55px auto;
 		@media #{$middle-wide} {
 			text-align: center;
+		}
+	}
+	i{
+		font-size: 72px;
+		float: left;
+		color: #ebeeee;
+	}
+	h3{
+		display: none;
+	}
+	p{
+		font: 18px/36px 'OpenSans Light', sans-serif;
+		color: rgb(99,99,99);
+		margin-left: 180px;
+	}
+	form{
+		clear: both;
+		width: 65%;
+	}
+	fieldset{
+		border: 0;
+	}
+	label{
+		font: 15px/24px 'OpenSans Bold', sans-serif;
+		color: #EBEEEE;
+	}
+	span{
+		font: 13px/24px 'OpenSans Regular', sans-serif;
+		color: #11ABB0;
+	}
+	input, textarea{
+		color: #EEE;
+		background: #373233;
+		border: 0;
+		padding: 18px 20px;
+		width: 65%;
+		margin: 64px 0 0 50px;
+		outline: none;
+		font-family: arial;
+		&:focus{
+			background: rgb(17,171,176);
 		}
 	}
 }

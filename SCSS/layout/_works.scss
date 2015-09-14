@@ -156,7 +156,9 @@
 				text-transform: uppercase;
 				letter-spacing: 3px;
 				text-decoration: none;
-				padding-right: 20px;
+				padding: 3px;
+				margin-right: 20px;
+				margin-left: -5px;
 				&:hover{
 					color: #00CCCC;
 				}
