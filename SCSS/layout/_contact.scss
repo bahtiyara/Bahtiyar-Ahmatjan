@@ -1,0 +1,13 @@
+.contact{
+	background: #191919;
+	width: 100%;
+	height: 500px;
+	float: left;
+	&-wrapper{
+		@include wrapper-width(1000px);
+		margin: 110px auto 55px auto;
+		@media #{$middle-wide} {
+			text-align: center;
+		}
+	}
+}

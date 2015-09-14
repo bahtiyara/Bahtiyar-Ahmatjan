@@ -70,109 +70,77 @@ $(window).resize(checkHeight);
 //about works pop
 $(document).ready(function() {
 	// Both black background and PopUp should be hide
+	$('.works-bg').hide();
 	$('.works-black').hide();
-	$('.works-black-pop').hide();
-	// Clicking the black background will hide b-bg and PopUp
-	$('.works-black').click(function() {
-		$('.works-black-pop').hide();
+	// Clicking the works-black-wrapper will hide works-bg and works-black
+	$('.works-bg, .works-black-wrapper, .works-black-pop-black a[href="#works"]').click(function() {
+		$('.works-bg').hide();
 		$('.works-black').hide();
 	});
+	$('.works-black-pop').click(function(e) {
+		e.stopPropagation();
+	})
 	// Clicking any works-pic should show b-bg, PopUp and fill the proper content
-	$('.works-pic:nth-of-type(1) .works-pic-hover').click(function() {
+	$('.works-pic-hover').click(function() {
 		// fill proper content
 		h = $('h5', this).html();
 		p = $('p', this).html();
 		$('.works-black-pop h5').html(h);
 		$('.works-black-pop span').html(p);
+		// Show b-bg, PopUp
+		$('.works-bg').show();
+		$('.works-black').fadeIn();
+	});
+	$('.works-pic:nth-of-type(1) .works-pic-hover').click(function() {
+		// fill proper content
 		$('.works-black-pop img').attr('src', 'img/m-coffee.jpg');
 		$('.works-black-pop p').html("Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.");
-		// Show b-bg, PopUp
-		$('.works-black').show();
-		$('.works-black-pop').fadeIn();
 	});
 	$('.works-pic:nth-of-type(2) .works-pic-hover').click(function() {
 		// fill proper content
-		h = $('h5', this).html();
-		p = $('p', this).html();
-		$('.works-black-pop h5').html(h);
-		$('.works-black-pop span').html(p);
 		$('.works-black-pop img').attr('src', 'img/m-console.jpg');
 		$('.works-black-pop p').html("Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.");
-		// Show b-bg, PopUp
-		$('.works-black').show();
-		$('.works-black-pop').fadeIn();
 	});
 	$('.works-pic:nth-of-type(3) .works-pic-hover').click(function() {
 		// fill proper content
-		h = $('h5', this).html();
-		p = $('p', this).html();
-		$('.works-black-pop h5').html(h);
-		$('.works-black-pop span').html(p);
 		$('.works-black-pop img').attr('src', 'img/m-judah.jpg');
 		$('.works-black-pop p').html("Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.");
-		// Show b-bg, PopUp
-		$('.works-black').show();
-		$('.works-black-pop').fadeIn();
 	});
 	$('.works-pic:nth-of-type(4) .works-pic-hover').click(function() {
 		// fill proper content
-		h = $('h5', this).html();
-		p = $('p', this).html();
-		$('.works-black-pop h5').html(h);
-		$('.works-black-pop span').html(p);
 		$('.works-black-pop img').attr('src', 'img/m-intothelight.jpg');
 		$('.works-black-pop p').html("Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.");
-		// Show b-bg, PopUp
-		$('.works-black').show();
-		$('.works-black-pop').fadeIn();
 	});
 	$('.works-pic:nth-of-type(5) .works-pic-hover').click(function() {
 		// fill proper content
-		h = $('h5', this).html();
-		p = $('p', this).html();
-		$('.works-black-pop h5').html(h);
-		$('.works-black-pop span').html(p);
 		$('.works-black-pop img').attr('src', 'img/m-farmerboy.jpg');
 		$('.works-black-pop p').html("Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.");
-		// Show b-bg, PopUp
-		$('.works-black').show();
-		$('.works-black-pop').fadeIn();
 	});
 	$('.works-pic:nth-of-type(6) .works-pic-hover').click(function() {
 		// fill proper content
-		h = $('h5', this).html();
-		p = $('p', this).html();
-		$('.works-black-pop h5').html(h);
-		$('.works-black-pop span').html(p);
 		$('.works-black-pop img').attr('src', 'img/m-girl.jpg');
 		$('.works-black-pop p').html("Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.");
-		// Show b-bg, PopUp
-		$('.works-black').show();
-		$('.works-black-pop').fadeIn();
 	});
 	$('.works-pic:nth-of-type(7) .works-pic-hover').click(function() {
 		// fill proper content
-		h = $('h5', this).html();
-		p = $('p', this).html();
-		$('.works-black-pop h5').html(h);
-		$('.works-black-pop span').html(p);
 		$('.works-black-pop img').attr('src', 'img/m-origami.jpg');
 		$('.works-black-pop p').html("Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.");
-		// Show b-bg, PopUp
-		$('.works-black').show();
-		$('.works-black-pop').fadeIn();
 	});
 	$('.works-pic:nth-of-type(8) .works-pic-hover').click(function() {
 		// fill proper content
-		h = $('h5', this).html();
-		p = $('p', this).html();
-		$('.works-black-pop h5').html(h);
-		$('.works-black-pop span').html(p);
 		$('.works-black-pop img').attr('src', 'img/m-retrocam.jpg');
 		$('.works-black-pop p').html("Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.");
-		// Show b-bg, PopUp
-		$('.works-black').show();
-		$('.works-black-pop').fadeIn();
 	});
 });
 
+// Give works-black a top value
+var scrollValue = 0;
+$(window).scroll(function() {
+	scrollValue = $(window).scrollTop() + "px";
+});
+
+$(document).ready(function() {
+	$('.works-pic-hover').click(function() {
+		$('.works-black').css("top", scrollValue);
+	});
+});
