@@ -563,22 +563,13 @@ header {
   background: #191919;
   width: 100%;
   height: auto;
-  float: left; }
+  float: left;
+  /* Track */
+  /* Handle */ }
   .contact-wrapper {
-    width: 1000px;
-    margin: 110px auto 55px auto; }
-    @media (max-width: 1024px) {
-      .contact-wrapper {
-        width: 850px; } }
-    @media (max-width: 900px) {
-      .contact-wrapper {
-        width: 750px; } }
-    @media (max-width: 767px) {
-      .contact-wrapper {
-        width: 450px; } }
-    @media (max-width: 480px) {
-      .contact-wrapper {
-        width: 85%; } }
+    width: 90%;
+    max-width: 1024px;
+    margin: 100px auto 190px auto; }
     @media (max-width: 767px) {
       .contact-wrapper {
         text-align: center; } }
@@ -591,15 +582,23 @@ header {
   .contact p {
     font: 18px/36px 'OpenSans Light', sans-serif;
     color: #636363;
-    margin-left: 180px; }
+    margin-left: 18%;
+    margin-bottom: 15px;
+    width: 78%; }
   .contact form {
     clear: both;
     width: 65%; }
   .contact fieldset {
-    border: 0; }
+    border: 0;
+    padding: 0; }
   .contact label {
     font: 15px/24px 'OpenSans Bold', sans-serif;
-    color: #EBEEEE; }
+    color: #EBEEEE;
+    display: inline-block;
+    width: 27.8%; }
+    .contact label[for="contactMessage"] {
+      vertical-align: top;
+      margin-top: 60px; }
   .contact span {
     font: 13px/24px 'OpenSans Regular', sans-serif;
     color: #11ABB0; }
@@ -607,13 +606,99 @@ header {
     color: #EEE;
     background: #373233;
     border: 0;
-    padding: 18px 20px;
-    width: 65%;
-    margin: 64px 0 0 50px;
+    padding: 22px 20px;
+    width: 57.5%;
+    margin: 45px 0 0 -8px;
     outline: none;
-    font-family: arial; }
+    font: 15px arial, sans-serif; }
     .contact input:focus, .contact textarea:focus {
       background: #11abb0; }
+  .contact textarea {
+    height: 350px;
+    resize: none; }
+  .contact button {
+    font: 16px/30px 'OpenSans Bold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    background: #0D0D0D;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 3px;
+    padding: 10px 20px;
+    transition: all 0.2s;
+    position: relative;
+    left: 27.8%;
+    top: 40px; }
+    .contact button:hover {
+      color: #0D0D0D;
+      background: #fff; }
+  .contact ::-webkit-scrollbar {
+    width: 8px; }
+  .contact ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: rgba(100, 100, 100, 0.9); }
+  .contact ::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(140, 140, 140, 0.9); }
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #0F0F0F;
+  float: left; }
+  footer .upper {
+    font-size: 21px;
+    color: white;
+    background-color: #525252;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    top: -30px;
+    margin: auto; }
+    footer .upper:hover {
+      background-color: #0F9095; }
+    @media (max-width: 767px) {
+      footer .upper {
+        width: 54px;
+        height: 54px;
+        line-height: 54px;
+        top: -27px; } }
+  footer .footer-wrapper {
+    margin: -15px auto 50px auto;
+    width: 80%;
+    max-width: 590px; }
+  footer ul {
+    margin-bottom: 36px; }
+  footer li {
+    display: inline-block;
+    padding: 0 20px; }
+  footer a i.fa {
+    color: #525252;
+    font-size: 30px;
+    transition: all 0.3s ease-in-out; }
+    footer a i.fa:hover {
+      color: #fff; }
+  footer p {
+    color: #303030;
+    font: 14px/24px 'OpenSans regular', sans-serif;
+    text-align: center; }
+    footer p span:before {
+      content: "\2022";
+      color: #095153; }
+    footer p a {
+      color: #525252;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out; }
+      footer p a:hover {
+        color: white; }
 
 .banner i, .scroll-down i {
   color: white;

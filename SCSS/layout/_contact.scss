@@ -4,8 +4,9 @@
 	height: auto;
 	float: left;
 	&-wrapper{
-		@include wrapper-width(1000px);
-		margin: 110px auto 55px auto;
+		width: 90%;
+		max-width: 1024px;
+		margin: 100px auto 190px auto;
 		@media #{$middle-wide} {
 			text-align: center;
 		}
@@ -21,7 +22,9 @@
 	p{
 		font: 18px/36px 'OpenSans Light', sans-serif;
 		color: rgb(99,99,99);
-		margin-left: 180px;
+		margin-left: 18%;
+		margin-bottom: 15px;
+		width: 78%;
 	}
 	form{
 		clear: both;
@@ -29,10 +32,17 @@
 	}
 	fieldset{
 		border: 0;
+		padding: 0;
 	}
 	label{
 		font: 15px/24px 'OpenSans Bold', sans-serif;
 		color: #EBEEEE;
+		display: inline-block;
+		width: 27.8%;
+		&[for="contactMessage"] {
+			vertical-align: top;
+			margin-top: 60px;
+		}
 	}
 	span{
 		font: 13px/24px 'OpenSans Regular', sans-serif;
@@ -42,13 +52,56 @@
 		color: #EEE;
 		background: #373233;
 		border: 0;
-		padding: 18px 20px;
-		width: 65%;
-		margin: 64px 0 0 50px;
+		padding: 22px 20px;
+		width: 57.5%;
+		margin: 45px 0 0 -8px;
 		outline: none;
-		font-family: arial;
+		font: 15px arial, sans-serif;
 		&:focus{
 			background: rgb(17,171,176);
 		}
+	}
+	textarea{
+		height: 350px;
+		resize: none;
+	}
+	button{
+		font: 16px/30px 'OpenSans Bold', sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		color: #fff;
+		background: #0D0D0D;
+		border: none;
+		cursor: pointer;
+		display: inline-block;
+		border-radius: 3px;
+		padding: 10px 20px;
+		transition: all 0.2s;
+		&:hover{
+			color: #0D0D0D;
+			background: #fff;
+		}
+		position: relative;
+		left: 27.8%;
+		top: 40px;
+	}
+
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+	 
+	/* Track */
+	::-webkit-scrollbar-track {
+		
+	}
+	 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		background: rgba(100,100,100,0.9);
+	}
+	::-webkit-scrollbar-thumb:window-inactive {
+		background: rgba(140,140,140,0.9); 
 	}
 }
