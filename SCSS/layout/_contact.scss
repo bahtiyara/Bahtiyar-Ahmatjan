@@ -5,34 +5,68 @@
 	float: left;
 	&-wrapper{
 		width: 90%;
-		max-width: 1024px;
-		margin: 100px auto 190px auto;
+		max-width: 960px;
+		margin: 100px auto 185px auto;
 		@media #{$middle-wide} {
-			text-align: center;
+			max-width: 400px;
+			width: 75%;
 		}
 	}
 	i{
 		font-size: 72px;
 		float: left;
 		color: #ebeeee;
+		@media #{$big-wide} {
+			font-size: 66px;
+		}
+		@media #{$middle-wide} {
+			display: none;
+		}
 	}
 	h3{
 		display: none;
+		@media #{$middle-wide} {
+			display: block;
+			text-align: center;
+			font: 16px/24px 'OpenSans Bold', sans-serif;
+			color: #EBEEEE;
+			text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			margin-bottom: 30px;
+		}
 	}
 	p{
 		font: 18px/36px 'OpenSans Light', sans-serif;
 		color: rgb(99,99,99);
-		margin-left: 18%;
+		margin-left: 17.5%;
 		margin-bottom: 15px;
 		width: 78%;
+		@media #{$middle-wide} {
+			text-align: justify;
+			margin: 0px;
+			width: 100%;
+			font-size: 17px;
+			line-height: 33px;
+			margin-bottom: 40px;
+		}
 	}
 	form{
 		clear: both;
 		width: 65%;
+		@media #{$middle-wide} {
+			width: 100%;
+		}
 	}
 	fieldset{
 		border: 0;
 		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+	fieldset div{
+		display: block;
+		width: 100%;
 	}
 	label{
 		font: 15px/24px 'OpenSans Bold', sans-serif;
@@ -42,6 +76,13 @@
 		&[for="contactMessage"] {
 			vertical-align: top;
 			margin-top: 60px;
+			@media #{$middle-wide} {
+				margin-top: 0px;
+			}
+		}
+		@media #{$middle-wide} {
+			text-align: left;
+			width: 37.8%;
 		}
 	}
 	span{
@@ -53,12 +94,17 @@
 		background: #373233;
 		border: 0;
 		padding: 22px 20px;
-		width: 57.5%;
+		box-sizing: border-box;
+		width: 65%;
 		margin: 45px 0 0 -8px;
 		outline: none;
 		font: 15px arial, sans-serif;
 		&:focus{
 			background: rgb(17,171,176);
+		}
+		@media #{$middle-wide} {
+			width: 100%;
+			margin: 10px 0px 20px 0px;
 		}
 	}
 	textarea{
@@ -82,8 +128,12 @@
 			background: #fff;
 		}
 		position: relative;
-		left: 27.8%;
+		left: 27%;
 		top: 40px;
+		@media #{$middle-wide} {
+			left: 0px;
+			top: 15px;
+		}
 	}
 
 	::-webkit-scrollbar {

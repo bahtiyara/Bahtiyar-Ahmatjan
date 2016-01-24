@@ -144,3 +144,36 @@ $(document).ready(function() {
 		$('.works-black').css("top", scrollValue);
 	});
 });
+
+// Set testimonial slider's animation
+// ------ Solution No.1 ------
+// function testAnimate() {
+// 	var bWidth = $('blockquote').width() * -1 - 1;
+// 	$('.b-wrapper-i').animate({marginLeft: "0px"}, 800, "easeInOutQuint").delay(10000).animate({marginLeft: bWidth}, 800, "easeInOutQuint", testAnimate).delay(10000);
+// }
+
+// $(document).ready(testAnimate);
+// $(window).resize(testAnimate);
+
+// ------ Solution No.2 ------
+var loop = setInterval(anim, 21600);
+function anim(){
+	var bWidth = $('blockquote').width() * -1 - 1;
+	$('.b-wrapper-i').animate({marginLeft: "0px"}, 800, "easeInOutQuint").delay(10000).animate({marginLeft: bWidth}, 800, "easeInOutQuint").delay(10000);
+}
+$(document).ready(anim);
+$(window).resize(anim);
+
+// circle active or inactive, class toggle
+function circleToggle() {
+	lmargin = $('blockquote').width() * -1 -1;
+	if ($('.b-wrapper-i').css("margin-left") === 0 * lmargin + "px") {
+		// $('.circle').removeClass("c-active");
+		$('.circle:nth-of-type(1)').addClass("c-active");
+	} else if ($('.b-wrapper-i').css("margin-left") === 1 * lmargin + "px") {
+		// $('.circle').removeClass("c-active");
+		$('.circle:nth-of-type(2)').addClass("c-active");
+	};
+};
+
+$(document).ready(circleToggle);

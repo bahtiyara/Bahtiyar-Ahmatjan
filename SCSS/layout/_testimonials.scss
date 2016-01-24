@@ -1,10 +1,10 @@
 .testimonials{
 	@-webkit-keyframes movingblkqo{
-		0% {margin-top: 0px;}
-		4% {margin-top: -300px;}
-		50% {margin-top: -300px;}
-		54% {margin-top: 0px;}
-		100% {margin-top: 0px;}
+		0% {margin-left: 0px;}
+		4% {margin-left: -820px;}
+		50% {margin-left: -820px;}
+		54% {margin-left: 0px;}
+		100% {margin-left: 0px;}
 	}
 	background: url('#{$path-img}/testimonials-bg.jpg') no-repeat;
 	background-size: cover;
@@ -14,10 +14,16 @@
 	height: auto;
 	float: left;
 	&-wrapper{
-		@include wrapper-width(1000px);
 		margin: 110px auto 55px auto;
 		@media #{$middle-wide} {
 			text-align: center;
+		}
+		width: 90%;
+		max-width: 960px;
+		@media #{$middle-wide} {
+			text-align: center;
+			max-width: 400px;
+			width: 75%;
 		}
 	}
 	i{
@@ -26,23 +32,51 @@
 		@media #{$middle-wide} {
 			display: none;
 		}
+		@media #{$big-wide} {
+			font-size: 66px;
+		}
+	}
+	h5{
+		display: none;
+		text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
+		color: white;
+		font: 16px/24px 'OpenSans Bold', sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		margin-bottom: 35px;
+		@media #{$middle-wide} {
+			display: block;
+		}
 	}
 	.b-wrapper{
-		text-shadow: rgb(0, 0, 0) 0px 1px 3px;
+		text-shadow: black 0px 1px 3px;
 		color: #fff;
-		margin-left: 140px;
-		margin-top: -100px;
-		height: 300px;
+		margin-left: 17.5%;
+		margin-top: -80px;
+		height: auto;
 		overflow: hidden;
 		@media #{$middle-wide} {
 			margin-left: 0px;
 			margin-top: 0px;
 		}
 	}
+	.b-wrapper-i{
+		width: 100%;
+		margin-top: -16px;
+		padding-left: 2px;
+		display: -webkit-box;
+	}
+	blockquote{
+		margin-right: 0;
+		margin-left: 0;
+	}
 	p{
 		font: 24px/48px 'Librebaskerville Italic', serif;
+		@media #{$big-wide} {
+			font: 22px/46px 'Librebaskerville Italic', serif;
+		}
 		@media #{$middle-wide} {
-			font: 20px/42px;
+			font: 20px/40px 'Librebaskerville Italic', serif;
 		}
 	}
 	cite{
@@ -60,22 +94,26 @@
 		display: inline-block;
 		margin-right: 4px;
 		background-color: white;
-	}
-	.c-active{
-		opacity: 1;
-	}
-	.c-inactive{
 		opacity: 0.5;
 		&:hover{
 			opacity: 0.75;
 		}
 		cursor: pointer;
 	}
+	.c-active{
+		opacity: 1;
+		&:hover{
+			opacity: 1;
+		}
+		cursor: default;
+	}
 	.circle-wrapper{
 		padding-left: 180px;
 		padding-top: 20px;
-	}
-	.b-wrapper-i{
-		-webkit-animation: movingblkqo 20s infinite;
+		@media #{$middle-wide} {
+			padding-left: 0;
+			margin: auto;
+			width: 40px;
+		};
 	}
 }

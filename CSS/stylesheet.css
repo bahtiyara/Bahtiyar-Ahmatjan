@@ -53,7 +53,7 @@ nav {
     nav .nav-wrapper a {
       text-decoration: none;
       font-family: 'OpenSans Bold', sans-serif;
-      font-size: 10px;
+      font-size: 12px;
       color: white;
       letter-spacing: 2.5px;
       line-height: 47px;
@@ -484,55 +484,74 @@ header {
   float: left; }
 @-webkit-keyframes movingblkqo {
   0% {
-    margin-top: 0px; }
+    margin-left: 0px; }
   4% {
-    margin-top: -300px; }
+    margin-left: -820px; }
   50% {
-    margin-top: -300px; }
+    margin-left: -820px; }
   54% {
-    margin-top: 0px; }
+    margin-left: 0px; }
   100% {
-    margin-top: 0px; } }
+    margin-left: 0px; } }
   .testimonials-wrapper {
-    width: 1000px;
-    margin: 110px auto 55px auto; }
-    @media (max-width: 1024px) {
-      .testimonials-wrapper {
-        width: 850px; } }
-    @media (max-width: 900px) {
-      .testimonials-wrapper {
-        width: 750px; } }
-    @media (max-width: 767px) {
-      .testimonials-wrapper {
-        width: 450px; } }
-    @media (max-width: 480px) {
-      .testimonials-wrapper {
-        width: 85%; } }
+    margin: 110px auto 55px auto;
+    width: 90%;
+    max-width: 960px; }
     @media (max-width: 767px) {
       .testimonials-wrapper {
         text-align: center; } }
+    @media (max-width: 767px) {
+      .testimonials-wrapper {
+        text-align: center;
+        max-width: 400px;
+        width: 75%; } }
   .testimonials i {
     color: white;
     font-size: 72px; }
     @media (max-width: 767px) {
       .testimonials i {
         display: none; } }
+    @media (max-width: 900px) {
+      .testimonials i {
+        font-size: 66px; } }
+  .testimonials h5 {
+    display: none;
+    text-shadow: 0px 1px 3px black;
+    color: white;
+    font: 16px/24px 'OpenSans Bold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 35px; }
+    @media (max-width: 767px) {
+      .testimonials h5 {
+        display: block; } }
   .testimonials .b-wrapper {
     text-shadow: black 0px 1px 3px;
     color: #fff;
-    margin-left: 140px;
-    margin-top: -100px;
-    height: 300px;
+    margin-left: 17.5%;
+    margin-top: -80px;
+    height: auto;
     overflow: hidden; }
     @media (max-width: 767px) {
       .testimonials .b-wrapper {
         margin-left: 0px;
         margin-top: 0px; } }
+  .testimonials .b-wrapper-i {
+    width: 100%;
+    margin-top: -16px;
+    padding-left: 2px;
+    display: -webkit-box; }
+  .testimonials blockquote {
+    margin-right: 0;
+    margin-left: 0; }
   .testimonials p {
     font: 24px/48px 'Librebaskerville Italic', serif; }
+    @media (max-width: 900px) {
+      .testimonials p {
+        font: 22px/46px 'Librebaskerville Italic', serif; } }
     @media (max-width: 767px) {
       .testimonials p {
-        font: 20px/42px; } }
+        font: 20px/40px 'Librebaskerville Italic', serif; } }
   .testimonials cite {
     font: 12px 'OpenSans Regular', sans-serif;
     margin-top: 25px;
@@ -545,19 +564,24 @@ header {
     border-radius: 100%;
     display: inline-block;
     margin-right: 4px;
-    background-color: white; }
-  .testimonials .c-active {
-    opacity: 1; }
-  .testimonials .c-inactive {
+    background-color: white;
     opacity: 0.5;
     cursor: pointer; }
-    .testimonials .c-inactive:hover {
+    .testimonials .circle:hover {
       opacity: 0.75; }
+  .testimonials .c-active {
+    opacity: 1;
+    cursor: default; }
+    .testimonials .c-active:hover {
+      opacity: 1; }
   .testimonials .circle-wrapper {
     padding-left: 180px;
     padding-top: 20px; }
-  .testimonials .b-wrapper-i {
-    -webkit-animation: movingblkqo 20s infinite; }
+    @media (max-width: 767px) {
+      .testimonials .circle-wrapper {
+        padding-left: 0;
+        margin: auto;
+        width: 40px; } }
 
 .contact {
   background: #191919;
@@ -568,29 +592,62 @@ header {
   /* Handle */ }
   .contact-wrapper {
     width: 90%;
-    max-width: 1024px;
-    margin: 100px auto 190px auto; }
+    max-width: 960px;
+    margin: 100px auto 185px auto; }
     @media (max-width: 767px) {
       .contact-wrapper {
-        text-align: center; } }
+        max-width: 400px;
+        width: 75%; } }
   .contact i {
     font-size: 72px;
     float: left;
     color: #ebeeee; }
+    @media (max-width: 900px) {
+      .contact i {
+        font-size: 66px; } }
+    @media (max-width: 767px) {
+      .contact i {
+        display: none; } }
   .contact h3 {
     display: none; }
+    @media (max-width: 767px) {
+      .contact h3 {
+        display: block;
+        text-align: center;
+        font: 16px/24px 'OpenSans Bold', sans-serif;
+        color: #EBEEEE;
+        text-shadow: 0px 1px 3px black;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 30px; } }
   .contact p {
     font: 18px/36px 'OpenSans Light', sans-serif;
     color: #636363;
-    margin-left: 18%;
+    margin-left: 17.5%;
     margin-bottom: 15px;
     width: 78%; }
+    @media (max-width: 767px) {
+      .contact p {
+        text-align: justify;
+        margin: 0px;
+        width: 100%;
+        font-size: 17px;
+        line-height: 33px;
+        margin-bottom: 40px; } }
   .contact form {
     clear: both;
     width: 65%; }
+    @media (max-width: 767px) {
+      .contact form {
+        width: 100%; } }
   .contact fieldset {
     border: 0;
-    padding: 0; }
+    padding: 0;
+    margin: 0;
+    width: 100%; }
+  .contact fieldset div {
+    display: block;
+    width: 100%; }
   .contact label {
     font: 15px/24px 'OpenSans Bold', sans-serif;
     color: #EBEEEE;
@@ -599,6 +656,13 @@ header {
     .contact label[for="contactMessage"] {
       vertical-align: top;
       margin-top: 60px; }
+      @media (max-width: 767px) {
+        .contact label[for="contactMessage"] {
+          margin-top: 0px; } }
+    @media (max-width: 767px) {
+      .contact label {
+        text-align: left;
+        width: 37.8%; } }
   .contact span {
     font: 13px/24px 'OpenSans Regular', sans-serif;
     color: #11ABB0; }
@@ -607,12 +671,17 @@ header {
     background: #373233;
     border: 0;
     padding: 22px 20px;
-    width: 57.5%;
+    box-sizing: border-box;
+    width: 65%;
     margin: 45px 0 0 -8px;
     outline: none;
     font: 15px arial, sans-serif; }
     .contact input:focus, .contact textarea:focus {
       background: #11abb0; }
+    @media (max-width: 767px) {
+      .contact input, .contact textarea {
+        width: 100%;
+        margin: 10px 0px 20px 0px; } }
   .contact textarea {
     height: 350px;
     resize: none; }
@@ -629,11 +698,15 @@ header {
     padding: 10px 20px;
     transition: all 0.2s;
     position: relative;
-    left: 27.8%;
+    left: 27%;
     top: 40px; }
     .contact button:hover {
       color: #0D0D0D;
       background: #fff; }
+    @media (max-width: 767px) {
+      .contact button {
+        left: 0px;
+        top: 15px; } }
   .contact ::-webkit-scrollbar {
     width: 8px; }
   .contact ::-webkit-scrollbar-thumb {
@@ -679,7 +752,7 @@ footer {
     margin-bottom: 36px; }
   footer li {
     display: inline-block;
-    padding: 0 20px; }
+    padding: 0 22px; }
   footer a i.fa {
     color: #525252;
     font-size: 30px;
