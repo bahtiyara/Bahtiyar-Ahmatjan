@@ -35,17 +35,28 @@ footer{
 	}
 	ul{
 		margin-bottom: 36px;
+		padding-left: 0px;
+		text-align: center;
 	}
 	li{
 		display: inline-block;
 		padding: 0 22px;
-	}
-	a{
-		
+		@media #{$middle-wide} {
+			padding: 0 10px;
+		};
+		@media #{$small-wide} {
+			padding: 0 6px;
+		};
 	}
 	a i.fa{
 		color: #525252;
 		font-size: 30px;
+		@media #{$middle-wide} {
+			font-size: 22px;
+		};
+		@media #{$small-wide} {
+			font-size: 20px;
+		};
 		&:hover{
 			color: #fff;
 		}
