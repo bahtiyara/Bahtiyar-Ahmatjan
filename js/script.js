@@ -14,24 +14,33 @@ function scrolltoabout() {
 	}, 700);
 }
 $(document).ready(function() {
-	$(".scroll-down, .nav-wrapper a:nth-of-type(2)").click(scrolltoabout);
+	$(".scroll-down").click(scrolltoabout);
 });
 
 
 // hide and show nav bar
 function hideorshow() {
-	sd = $(".banner-wrapper").offset().top;
-	dd = $("body").scrollTop();
-	ld = $(".about").offset().top;
-	if (dd >= ld) {
-		$("nav").fadeIn(200);
-		$("nav").css("background-color", "#333333");
-	} else if (dd <= sd) {
-		$("nav").fadeIn(200);
-		$("nav").css("background-color", "rgba(0,0,0,0)");
-	} else {
-		$("nav").fadeOut(200);
-	}
+	var sd = $(".banner-wrapper").offset().top;
+	var dd = $("body").scrollTop();
+	var ld = $(".about").offset().top;
+	var ww = $(window).width();
+	if ( ww >= 768) {
+		if (dd >= ld) {
+			$("nav").css({
+				"background-color": "#333333",
+				"opacity": "1"
+			});
+		} else if (dd <= sd) {
+			$("nav").css({
+				"background-color": "rgba(0,0,0,0)",
+				"opacity": "1"
+			});
+		} else {
+			$("nav").css("opacity", 0);
+		}
+	}else{
+		$("nav").css("opacity", 1);
+	};
 }
 $(document).scroll(hideorshow);
 $(window).resize(hideorshow);
@@ -177,3 +186,61 @@ function circleToggle() {
 };
 
 $(document).ready(circleToggle);
+
+// Click nav-button to show/hide nav bar
+$(document).ready(function() {
+	$('.nav-button').click(function() {
+		$('nav').fadeIn(200);
+	});
+});
+
+$(document).mouseup(function() {
+	var containerStatus = $('nav').css("display");
+	var winWidth = $(window).width();
+	if (containerStatus = "block"
+		&& winWidth < 768) {
+		$('nav').fadeOut(200);
+	}
+})
+
+// scroll to place remove previous active class and add active class
+function scrollToPlace() {
+	dd = $("body").scrollTop();
+	d1 = $("header").offset().top;
+	d2 = $(".about").offset().top;
+	d3 = $(".resume").offset().top;
+	d4 = $(".works").offset().top;
+	d5 = $(".testimonials").offset().top;
+	d6 = $(".contact").offset().top;
+	if (dd >= d6) {
+		$("nav a").removeClass("active");
+		$("nav a[href='#contact']").addClass("active");
+	} else if (dd >= d5) {
+		$("nav a").removeClass("active");
+		$("nav a[href='#testimonials']").addClass("active");
+	} else if (dd >= d4) {
+		$("nav a").removeClass("active");
+		$("nav a[href='#works']").addClass("active");
+	} else if (dd >= d3) {
+		$("nav a").removeClass("active");
+		$("nav a[href='#resume']").addClass("active");
+	} else if (dd >= d2) {
+		$("nav a").removeClass("active");
+		$("nav a[href='#about']").addClass("active");
+	} else if (dd >= d1) {
+		$("nav a").removeClass("active");
+		$("nav a[href='#home']").addClass("active");
+	}
+}
+$(document).ready(scrollToPlace);
+$(window).scroll(scrollToPlace);
+
+// Click the nav bar scroll to place
+$(document).ready(function() {
+	$('nav a').click(function() {
+		$('html, body').animate({
+			scrollTop: $('[name="' + $.attr(this, 'href').substr(2) + '"]').offset().top
+		}, 700);
+		return false;
+	});
+});
