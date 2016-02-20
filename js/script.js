@@ -4,8 +4,10 @@ function full() {
 	$('header').css("height", height);
 }
 $(document).ready(full);
-$(window).resize(full);
-
+var ww = $(window).width;
+if (ww > 768) {
+	$(window).resize(full);
+}
 
 // scroll to about
 function scrolltoabout() {
@@ -17,6 +19,15 @@ $(document).ready(function() {
 	$(".scroll-down").click(scrolltoabout);
 });
 
+// scroll to home
+function scrolltoHome() {
+	$('html, body').animate({
+		scrollTop: $("header").offset().top
+	}, 700);
+}
+$(document).ready(function() {
+	$(".upper").click(scrolltoHome);
+});
 
 // hide and show nav bar
 function hideorshow() {
@@ -50,7 +61,7 @@ $(window).resize(hideorshow);
 var done = false;
 function rangebaranimate() {
 	dd = $("body").scrollTop() + $(window).height();
-	ld = $(".up5").offset().top;
+	ld = $(".up3").offset().top;
 	if (dd > ld && !done) {
 		$(".up").animate({width:"100%"});
 		done = true;
@@ -82,7 +93,7 @@ $(document).ready(function() {
 	$('.works-bg').hide();
 	$('.works-black').hide();
 	// Clicking the works-black-wrapper will hide works-bg and works-black
-	$('.works-bg, .works-black-wrapper, .works-black-pop-black a[href="#works"]').click(function() {
+	$('.works-bg, .works-black-wrapper, .works-black-pop-black a:nth-of-type(2)').click(function() {
 		$('.works-bg').hide();
 		$('.works-black').hide();
 	});
@@ -102,42 +113,42 @@ $(document).ready(function() {
 	});
 	$('.works-pic:nth-of-type(1) .works-pic-hover').click(function() {
 		// fill proper content
-		$('.works-black-pop img').attr('src', 'img/m-coffee.jpg');
+		$('.works-black-pop img').attr('src', 'http://7xqrvo.com1.z0.glb.clouddn.com/m-coffee.jpg');
 		$('.works-black-pop p').html("Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.");
 	});
 	$('.works-pic:nth-of-type(2) .works-pic-hover').click(function() {
 		// fill proper content
-		$('.works-black-pop img').attr('src', 'img/m-console.jpg');
+		$('.works-black-pop img').attr('src', 'http://7xqrvo.com1.z0.glb.clouddn.com/m-console.jpg');
 		$('.works-black-pop p').html("Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.");
 	});
 	$('.works-pic:nth-of-type(3) .works-pic-hover').click(function() {
 		// fill proper content
-		$('.works-black-pop img').attr('src', 'img/m-judah.jpg');
+		$('.works-black-pop img').attr('src', 'http://7xqrvo.com1.z0.glb.clouddn.com/m-judah.jpg');
 		$('.works-black-pop p').html("Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.");
 	});
 	$('.works-pic:nth-of-type(4) .works-pic-hover').click(function() {
 		// fill proper content
-		$('.works-black-pop img').attr('src', 'img/m-intothelight.jpg');
+		$('.works-black-pop img').attr('src', 'http://7xqrvo.com1.z0.glb.clouddn.com/m-intothelight.jpg');
 		$('.works-black-pop p').html("Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.");
 	});
 	$('.works-pic:nth-of-type(5) .works-pic-hover').click(function() {
 		// fill proper content
-		$('.works-black-pop img').attr('src', 'img/m-farmerboy.jpg');
+		$('.works-black-pop img').attr('src', 'http://7xqrvo.com1.z0.glb.clouddn.com/m-farmerboy.jpg');
 		$('.works-black-pop p').html("Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.");
 	});
 	$('.works-pic:nth-of-type(6) .works-pic-hover').click(function() {
 		// fill proper content
-		$('.works-black-pop img').attr('src', 'img/m-girl.jpg');
+		$('.works-black-pop img').attr('src', 'http://7xqrvo.com1.z0.glb.clouddn.com/m-girl.jpg');
 		$('.works-black-pop p').html("Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.");
 	});
 	$('.works-pic:nth-of-type(7) .works-pic-hover').click(function() {
 		// fill proper content
-		$('.works-black-pop img').attr('src', 'img/m-origami.jpg');
+		$('.works-black-pop img').attr('src', 'http://7xqrvo.com1.z0.glb.clouddn.com/m-origami.jpg');
 		$('.works-black-pop p').html("Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.");
 	});
 	$('.works-pic:nth-of-type(8) .works-pic-hover').click(function() {
 		// fill proper content
-		$('.works-black-pop img').attr('src', 'img/m-retrocam.jpg');
+		$('.works-black-pop img').attr('src', 'http://7xqrvo.com1.z0.glb.clouddn.com/m-retrocam.jpg');
 		$('.works-black-pop p').html("Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.");
 	});
 });
